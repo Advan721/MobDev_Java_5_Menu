@@ -22,13 +22,23 @@
             android:title="copy">
         </item>
         <item
-            android:id="@+id/menu_paste"
+            android:id="@+id/menu_cut"
             android:orderInCategory="2"
+            android:title="cut">
+        </item>
+        <item
+            android:id="@+id/menu_undo"
+            android:orderInCategory="3"
+            android:title="undo">
+        </item>
+        <item
+            android:id="@+id/menu_paste"
+            android:orderInCategory="4"
             android:title="paste">
         </item>
         <item
             android:id="@+id/menu_exit"
-            android:orderInCategory="4"
+            android:orderInCategory="5"
             android:title="exit">
         </item>
     </group>
