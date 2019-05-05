@@ -44,18 +44,25 @@ public class MainActivity extends AppCompatActivity {
     // обработка нажатий
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        // TODO Auto-generated method stub
-        StringBuilder sb = new StringBuilder();
+        switch (item.getItemId()) {
+            case R.id.menu_exit:
+                finish();
+                System.exit(0);
+                return true;
+            default:
+                // TODO Auto-generated method stub
+                StringBuilder sb = new StringBuilder();
 
-        // Выведем в TextView информацию о нажатом пункте меню
-        sb.append("Item Menu");
-        sb.append("\r\n groupId: " + String.valueOf(item.getGroupId()));
-        sb.append("\r\n itemId: " + String.valueOf(item.getItemId()));
-        sb.append("\r\n order: " + String.valueOf(item.getOrder()));
-        sb.append("\r\n title: " + item.getTitle());
-        tv.setText(sb.toString());
+                // Выведем в TextView информацию о нажатом пункте меню
+                sb.append("Item Menu");
+                sb.append("\r\n groupId: " + String.valueOf(item.getGroupId()));
+                sb.append("\r\n itemId: " + String.valueOf(item.getItemId()));
+                sb.append("\r\n order: " + String.valueOf(item.getOrder()));
+                sb.append("\r\n title: " + item.getTitle());
+                tv.setText(sb.toString());
 
-        return super.onOptionsItemSelected(item);
+                return super.onOptionsItemSelected(item);
+        }
     }
 
 }
